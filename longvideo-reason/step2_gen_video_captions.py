@@ -85,7 +85,7 @@ def eval_model(args):
             video_path = temp_path
             try:
                 output = get_model_output(model, video_path, question)
-            except:
+            except Exception:
                 continue
             output_dict = {video_key: output}
             json.dump(output_dict, open(caption_file, "w"))

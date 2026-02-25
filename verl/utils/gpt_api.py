@@ -1,7 +1,7 @@
 import openai
 try:
     openai.api_key = os.getenv("OPENAI_API_KEY")
-except:
+except Exception:
     print("Please set the environment variable OPENAI_API_KEY if you need open-ended reward computation.")
 
 def generate_gpt(prompt, model="gpt-4o-mini-2024-07-18"):

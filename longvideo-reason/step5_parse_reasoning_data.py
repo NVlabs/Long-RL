@@ -34,7 +34,7 @@ def parse_reasoning(reasoning_text):
         step_reasons = [line.strip('- ') for line in block.strip().split('\n') if line.startswith('- ')]
         try:
             timestamp = reason_blocks_2[i].split(block)[0].split("[")[1].split("]")[0]
-        except:
+        except Exception:
             timestamp = ""
         reasons[f"Step {i + 1}"] = {"timestamp": timestamp, "reasons": step_reasons}
 
@@ -56,7 +56,7 @@ def process_json_files(folder_path, output_file):
                         parsed_info = parse_reasoning(data["reasoning"])
                         parsed_info["video_name"] = data["video_name"]
                         all_parsed_data.append(parsed_info)
-                except:
+                except Exception:
                     print("Failed to process %s"%file_path)
     # Save parsed data to a new JSON file
     with open(output_file, "w", encoding="utf-8") as out_f:
