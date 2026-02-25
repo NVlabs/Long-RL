@@ -5,7 +5,7 @@ import requests
 from argparse import ArgumentParser
 try:
     openai.api_key = os.getenv("OPENAI_API_KEY")
-except:
+except Exception:
     raise ValueError("Please set the environment variable OPENAI_API_KEY if you need open-ended reward computation.")
 
 def _remove_captions(_input):

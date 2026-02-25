@@ -24,7 +24,7 @@ from .utils import RingComm, update_out_and_lse
 
 try:
     from .triton_utils import flatten_varlen_lse, unflatten_varlen_lse
-except:
+except Exception:
     from .utils import flatten_varlen_lse, unflatten_varlen_lse
 
 

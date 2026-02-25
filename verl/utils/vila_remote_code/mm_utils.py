@@ -141,7 +141,7 @@ def get_frame_from_vcap_with_fps(vidcap, num_frames=10, max_fps=0.0, fps=None, f
                         img = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                         im_pil = Image.fromarray(img)
                         images.append(im_pil)
-                    except:
+                    except Exception:
                         # print("Failed to read frame:", count)
                         continue
                     if len(images) >= num_frames:
@@ -157,7 +157,7 @@ def get_frame_from_vcap_with_fps(vidcap, num_frames=10, max_fps=0.0, fps=None, f
                         img = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                         im_pil = Image.fromarray(img)
                         images.append(im_pil)
-                    except:
+                    except Exception:
                         # print("Failed to read frame:", count)
                         continue
                     count += 1
@@ -186,7 +186,7 @@ def get_frame_from_vcap_with_fps(vidcap, num_frames=10, max_fps=0.0, fps=None, f
                     img = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                     im_pil = Image.fromarray(img)
                     images.append(im_pil)
-                except:
+                except Exception:
                     continue
                 count += 1
             looked += 1
