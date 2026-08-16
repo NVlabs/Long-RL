@@ -156,7 +156,7 @@ print("Response: ", response)
 
 ## Supported Features
 - [x] **Open-ended reward**: 
-- We support training for open-ended QAs (non-multi-choices QAs). Please do the following steps if you neet it.
+- We support training for open-ended QAs (non-multi-choices QAs). Please do the following steps if you need it.
   - Set `--worker.rollout.open_ended_reward=True` in the training script.
   - Export your openai API with `export OPENAI_API_KEY=xxx`.
 - [x] **Cached video embeddings**:
