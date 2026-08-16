@@ -160,7 +160,7 @@ print("Response: ", response)
   - Set `--worker.rollout.open_ended_reward=True` in the training script.
   - Export your openai API with `export OPENAI_API_KEY=xxx`.
 - [x] **Cached video embeddings**:
-- We support using cached video embeddings for video RL training. Because video encoding during training is slow for large batch & long video frames. Please do the following steps if you neet it.
+- We support using cached video embeddings for video RL training. Because video encoding during training is slow for large batch & long video frames. Please do the following steps if you need it.
   - Follow `verl/utils/cache_video_embeds_vila.py` to cache video embeddings in a local directory.
   - Set `--data.cache_dir` and `--worker.actor.cached_embeds_dir` in the training script.
 - [x] **Chunked gathering**:
